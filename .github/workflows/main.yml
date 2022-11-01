@@ -30,6 +30,6 @@ jobs:
       - run: npm publish --access=public
         working-directory: ./src/dist
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_SECRET}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_ESOLUTION_NATIVESCRIPT_GOOGLE_MAPS_SDK}}
       - run: npm run dist.clean
         working-directory: ./src
