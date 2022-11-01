@@ -1,7 +1,7 @@
 {
-  "name": "nativescript-google-maps-sdk",
-  "version": "3.0.2",
-  "description": "Google Maps SDK plugin for Nativescript",
+  "name": "esolution-nativescript-google-maps-sdk",
+  "version": "3.0.2-alpha-1",
+  "description": "This repository is forked from dapriett/nativescript-google-maps-sdk. Google Maps SDK plugin for Nativescript",
   "main": "map-view",
   "typings": "map-view.d.ts",
   "nativescript": {
@@ -11,25 +11,21 @@
     }
   },
   "scripts": {
-    "cm": "git-cz",
-    "commitmsg": "validate-commit-msg",
-    "github-release": "conventional-github-releaser -p angular -n ./.github-release.json",
-    "clean": "rm -f *.js",
-    "build": "npm run clean && ts-patch install && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "./node_modules/.bin/tsc",
-    "plugin.link": "npm link && cd ../demo && npm link nativescript-google-maps-sdk && cd ../src",
-    "prepare": "node ./scripts/prepare.js",
-    "demo.ios": "npm i && npm run build && cd ../demo && tns run ios --no-hmr",
-    "demo.debug.ios": "npm i && npm run build && cd ../demo && tns debug ios --no-hmr",
+    "build": "npm i && ts-patch install && npm run tsc.dist",
     "demo.android": "npm i && npm run build && cd ../demo && tns run android --device --no-hmr",
-    "demo-vue.ios": "npm i && npm run build && cd ../demo-vue && tns run ios --bundle --syncAllFiles",
+    "demo.debug.ios": "npm i && npm run build && cd ../demo && tns debug ios --no-hmr",
+    "demo.ios": "npm i && npm run build && cd ../demo && tns run ios --no-hmr",
     "demo-vue.android": "npm i && npm run build && cd ../demo-vue && tns run android --bundle --syncAllFiles",
-    "generate.typings.ios": "cd ../demo && TNS_DEBUG_METADATA_PATH=\"$(pwd)/metadata\" tns build ios && TNS_TYPESCRIPT_DECLARATIONS_PATH=\"$(pwd)/typings\" tns build ios && echo 'Now look for your library typings in demo/typings!'"
+    "demo-vue.ios": "npm i && npm run build && cd ../demo-vue && tns run ios --bundle --syncAllFiles",
+    "dist.clean": "rimraf dist",
+    "dist.copy": "cp -R platforms dist && cp ../README.md dist && cp map-view.d.ts dist && cp package.json dist",
+    "generate.typings.ios": "cd ../demo && TNS_DEBUG_METADATA_PATH=\"$(pwd)/metadata\" tns build ios && TNS_TYPESCRIPT_DECLARATIONS_PATH=\"$(pwd)/typings\" tns build ios && echo 'Now look for your library typings in demo/typings!'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc.dist": "npm run dist.clean && tsc -skipLibCheck --outDir dist && npm run dist.copy"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dapriett/nativescript-google-maps-sdk.git"
+    "url": "git+ssh://git@github.com:febriarief/esolution-nativescript-google-maps-sdk.git"
   },
   "keywords": [
     "Nativescript",
@@ -41,9 +37,9 @@
   "author": "Dan Prietti <dprietti@gmail.com> (https://github.com/dapriett)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dapriett/nativescript-google-maps-sdk/issues"
+    "url": "https://github.com/febriarief/esolution-nativescript-google-maps-sdk/issues"
   },
-  "homepage": "https://github.com/dapriett/nativescript-google-maps-sdk#readme",
+  "homepage": "https://github.com/febriarief/esolution-nativescript-google-maps-sdk/blob/master/README.md",
   "devDependencies": {
     "@nativescript/core": "^7.0.12",
     "@nativescript/types": "^7.0.4",

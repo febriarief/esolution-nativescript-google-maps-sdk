@@ -1,5 +1,6 @@
 NativeScript plugin for the Google Maps SDK
 ================
+This repository is forked from `dapriett/nativescript-google-maps-sdk`
 
 This is a cross-platform (iOS & Android) Nativescript plugin for the [Google Maps API](https://developers.google.com/maps/).
 
