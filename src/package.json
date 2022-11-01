@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dapriett/nativescript-google-maps-sdk.git"
+    "url": "git+ssh://git@github.com:febriarief/esolution-nativescript-google-maps-sdk.git"
   },
   "keywords": [
     "Nativescript",
@@ -37,9 +37,9 @@
   "author": "Dan Prietti <dprietti@gmail.com> (https://github.com/dapriett)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dapriett/nativescript-google-maps-sdk/issues"
+    "url": "https://github.com/febriarief/esolution-nativescript-google-maps-sdk/issues"
   },
-  "homepage": "https://github.com/dapriett/nativescript-google-maps-sdk#readme",
+  "homepage": "https://github.com/febriarief/esolution-nativescript-google-maps-sdk#readme",
   "devDependencies": {
     "@nativescript/core": "^7.0.12",
     "@nativescript/types": "^7.0.4",
